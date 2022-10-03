@@ -1,0 +1,231 @@
+/* Assigns name to font in folder */ 
+@font-face {
+    font-family: 'Caladea';
+    src: url('caladea/Caladea-Regular.ttf'); 
+}
+@font-face {
+    font-family: 'Caladea';
+    src: url('caladea/Caladea-Bold.ttf'); 
+    font-weight: bold;
+}
+
+/* Sets text colour and font style for all elements */ 
+*{  
+    color: #242424;
+    font-family: Caladea, Arial, Helvetica, sans-serif;
+}
+
+/* Assigns 100% value to root elements */ 
+body, html{
+    height: 100%;
+    background-color: #c9c9c9;
+    margin: 0;
+    scroll-behavior: smooth;
+
+    
+}
+
+/* Div that is the size of the whole page, when hovered over,it makes the name
+ come onto the screen  */ 
+.background{
+    height: 97vh;
+    width: auto;
+    position: relative;
+}
+
+/* "Hello, my name is" text, position absolute, meaning it is fixed to the value
+ given, relative to the edge of its parent  */ 
+.first-row{
+    font-size: 64px;
+    font-weight: bold;
+
+    position: absolute;
+    top: 30%;
+    left: 7%;
+}
+
+/* wrapper for the animation of "Marcel", overflow means that when the page loads,
+the name will be off screen and cannot be scrolled to. Relative position means it
+is positioned relative to where it is normally, so top 33% means it is 33% (of the
+screen distance) away from where it was before */ 
+.outer {
+    overflow: hidden;
+    position: relative;
+    top: 33.33%;
+}
+
+/* So that we have the name off-screen starting off, we set it to be just outside
+the screen by using relative position. So it is 100% to the left of the screen
+compared to where it was at the start. */ 
+.second-row{
+    font-size: 187px;
+    font-weight: bold;
+    text-align: center;
+
+    position: relative;
+    left: -100%;
+    transition: transform 900ms ease-in-out;
+}
+
+/* When the background div is hovered over, then the "Marcel" text, will be moved
+along the x-axis by 100%, since we started at -100% it will move our element just
+to the start of the screen (text is in the middle of the element).
+
+Reason why transition property is assigned in the child (not parent) is so that
+when this function is not engaged (mouse not hovering), the child wont jump to 
+its original position, but be transformed back (animation in reverse) */ 
+.background:hover .second-row {
+    transform:translateX(100%)
+}
+
+/* This is the bottom of the page text to "pull down". Width sets the width of the 
+entire element to that of 50% of the screen */ 
+.third-row{
+    font-size: 24px;
+    text-align: center;
+    width: 50%;
+    position: absolute;
+    left: 25%;
+    bottom: 2%;
+}
+
+/* Navigation bar off-screen */ 
+
+.navbox-wrapper{
+    width: auto;
+    height: 100%;
+    position: relative;
+
+
+}
+
+/* About rectangle */
+
+.navbox1{
+    background-color: #242424;
+    width: 25%;
+    height: 100%;
+    position: absolute;
+    transition: background-color 750ms ease-in-out;
+}
+.navbox1 #about{
+    width: 100%;
+    height: auto;
+    color: #c9c9c9;
+    font-size: 64px;
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    top:45%;
+    transition: color 750ms ease-in-out;
+}
+.navbox1:hover{
+    background-color: #c9c9c9;
+}
+.navbox1:hover #about{
+    color: #242424;
+}
+
+/* Work rectangle */
+
+.navbox2{
+    background-color: #242424;
+    width: 25%;
+    height: 100%;
+    position: absolute;
+    left: 25%;
+    transition: background-color 750ms ease-in-out;
+}
+.navbox2 #work{
+    width: 100%;
+    height: auto;
+    color: #c9c9c9;
+    font-size: 64px;
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    top:45%;
+    transition: color 750ms ease-in-out;
+}
+.navbox2:hover{
+    background-color: #c9c9c9;
+}
+.navbox2:hover #work{
+    color: #242424;
+}
+
+/* Art rectangle */
+
+.navbox3{
+    background-color: #242424;
+    width: 25%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    transition: background-color 750ms ease-in-out;
+}
+.navbox3 #art{
+    width: 100%;
+    height: auto;
+    color: #c9c9c9;
+    font-size: 64px;
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    top:45%;
+    transition: color 750ms ease-in-out;
+}
+.navbox3:hover{
+    background-color: #c9c9c9;
+}
+.navbox3:hover #art{
+    color: #242424;
+}
+
+/* Contact rectangle */
+
+.navbox4{
+    background-color: #242424;
+    width: 25%;
+    height: 100%;
+    position: absolute;
+    left: 75%;
+    transition: background-color 750ms ease-in-out;
+}
+.navbox4 #contact{
+    width: 100%;
+    height: auto;
+    color: #c9c9c9;
+    font-size: 64px;
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    top:45%;
+    transition: color 750ms ease-in-out;
+}
+.navbox4:hover{
+    background-color: #c9c9c9;
+}
+.navbox4:hover #contact{
+    color: #242424;
+}
+
+/* Top bar */
+.topbar{
+    scroll-behavior: smooth;
+}
+
+#zipper{
+    width: 100%;
+    height: 30px;
+    background-color: #242424;
+    border: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+#zipper:hover{
+    background-color: #565656;
+    cursor: pointer;
+}
+

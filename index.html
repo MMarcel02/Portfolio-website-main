@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script type="text/javascript">
+        function scrollToBottom() {
+            window.scrollTo(0, document.body.scrollHeight);
+            }
+    history.scrollRestoration = "manual";
+    window.onload = scrollToBottom;
+      
+
+      function topFunction() 
+      {
+        document.documentElement.scrollTop = 0;
+      } 
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+  </head>
+  
+
+
+  <body>
+    <div class="navbox-wrapper">
+        <a href="/sub_pages/about.html">
+            <div class="navbox1">
+                <div id="about">About</div>
+            </div>
+        </a>
+        <a href="/sub_pages/work.html">
+            <div class="navbox2">
+                <div id="work">Work</div>
+            </div>
+        </a>
+        <a href="/sub_pages/art.html">
+            <div class="navbox3">
+                <div id="art">Art</div>
+            </div>
+        </a>
+        <a href="/sub_pages/contact.html">
+            <div class="navbox4">
+                <div id="contact">Contact</div>
+            </div>
+        </a>
+    </div>  
+    
+    <div class="topbar">
+        <button onclick="topFunction()" id="zipper" title="Go to top"></button> 
+    </div>
+        
+    
+
+
+
+    <div class="background">
+        <div class="first-row">
+            Hello, my name is    
+        </div>
+        <div class="outer">
+            <div class="second-row ">
+                Marcel 
+            </div>
+        </div>
+        <div class="third-row">  
+            Scroll up.   
+        </div>
+
+    </div>
+  </body>
+</html>
+
