@@ -1,93 +1,68 @@
-/* Assigns name to font in folder */ 
 @font-face {
     font-family: 'Caladea';
-    src: url('caladea/Caladea-Regular.ttf'); 
+    src: url('../caladea/Caladea-Regular.ttf'); 
 }
 @font-face {
     font-family: 'Caladea';
-    src: url('caladea/Caladea-Bold.ttf'); 
+    src: url('../caladea/Caladea-Bold.ttf'); 
     font-weight: bold;
 }
 
-/* Sets text colour and font style for all elements */ 
 *{  
     color: #242424;
-    font-family: Caladea, Arial, Helvetica, sans-serif;
+    font-family: Caladea;
 }
 
-/* Assigns 100% value to root elements */ 
 body, html{
     height: 100%;
     background-color: #c9c9c9;
     margin: 0;
     scroll-behavior: smooth;
-}
-
-/* Div that is the size of the whole page, when hovered over,it makes the name
- come onto the screen  */ 
-.background{
-    height: 97vh;
-    width: auto;
     position: relative;
 }
 
-/* "Hello, my name is" text, position absolute, meaning it is fixed to the value
- given, relative to the edge of its parent  */ 
-.first-row{
+#bottom-box{
+    height: 97vh;
+    width: 100%;
+    position: absolute;
+    top: 103vh;
+    border: 3px solid black;
+}
+
+#central{
+    background-color: #242424;
+    
+    width: 1250px;
+    height: 800px;
+    border: 3px solid black;
+    margin: auto;
+    position: relative;
+    top: 5%;
+}
+
+#about{
+    color: #c9c9c9;
     font-size: 64px;
     font-weight: bold;
 
-    position: absolute;
-    top: 30%;
-    left: 7%;
 }
 
-/* wrapper for the animation of "Marcel", overflow means that when the page loads,
-the name will be off screen and cannot be scrolled to. Relative position means it
-is positioned relative to where it is normally, so top 33% means it is 33% (of the
-screen distance) away from where it was before */ 
-.outer {
-    overflow: hidden;
-    position: relative;
-    top: 33.33%;
+#text-body{
+    color: #c9c9c9;
+    font-size: 48px;
+
 }
 
-/* So that we have the name off-screen starting off, we set it to be just outside
-the screen by using relative position. So it is 100% to the left of the screen
-compared to where it was at the start. */ 
-.second-row{
-    font-size: 187px;
-    font-weight: bold;
-    text-align: center;
+#resume-button
+    
 
-    position: relative;
-    left: -100%;
-    transition: transform s cubic-bezier(.68,-0.55,.27,1.55);
-}
 
-/* When the background div is hovered over, then the "Marcel" text, will be moved
-along the x-axis by 100%, since we started at -100% it will move our element just
-to the start of the screen (text is in the middle of the element).
 
-Reason why transition property is assigned in the child (not parent) is so that
-when this function is not engaged (mouse not hovering), the child wont jump to 
-its original position, but be transformed back (animation in reverse) */ 
-.background:hover .second-row {
-    transform:translateX(100%)
-}
 
-/* This is the bottom of the page text to "pull down". Width sets the width of the 
-entire element to that of 50% of the screen */ 
-.third-row{
-    font-size: 24px;
-    text-align: center;
-    width: 50%;
-    position: absolute;
-    left: 25%;
-    bottom: 2%;
-}
 
-/* Navigation bar off-screen */ 
+
+
+/* TOP MENU */
 
 .navbox-wrapper{
     width: auto;
@@ -210,12 +185,13 @@ entire element to that of 50% of the screen */
 
 /* Top bar */
 .topbar{
-    scroll-behavior: smooth;
+    position: relative;
+    top: 100%;
 }
 
 #zipper{
     width: 100%;
-    height: 30vh;
+    height: 30px;
     background-color: #242424;
     border: 0;
     margin: 0;
